@@ -1,0 +1,50 @@
+:host { display: block; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar .logo { color: #fff; font-size: 1.5rem; }
+.navbar .nav-links { list-style: none; display: flex; }
+.navbar .nav-links li { margin: 0 1rem; }
+.navbar .nav-links li a { color: #fff; text-decoration: none; font-size: 1rem; }
+.navbar.open .nav-links { display: block; }
+.navbar .hamburger { display: none; flex-direction: column; cursor: pointer; }
+.navbar .hamburger span { width: 25px; height: 3px; background: #fff; margin: 4px 0; transition: 0.4s; }
+
+.hero {
+  position: relative;
+  height: 200vh;             /* ← sezione estesa per effetto parallax */
+  overflow: hidden;
+}
+
+.hero video {
+  position: sticky;          /* ← mantiene il video fisso durante il scroll */
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero .hero-content {
+  position: absolute;          /* ← rimane centrato nella viewport */
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  /* Opacità controllata da fadeRatio */
+}
+
+@media (max-width: 700px) {
+  .navbar .nav-links { display: none; flex-direction: column; background: rgba(0, 0, 0, 0.9); position: absolute; top: 100%; width: 100%; }
+  .navbar .hamburger { display: flex; }
+}

@@ -1,0 +1,11 @@
+:host { display: block; }
+
+.project-page {
+  height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #333;
+}

@@ -1,0 +1,2 @@
+.bg { height:100vh; background:url('/assets/images/points.svg') repeat; }
+.dark-mode .bg { background:url('/assets/images/x-grid.svg') repeat; }
