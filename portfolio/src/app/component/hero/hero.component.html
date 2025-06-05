@@ -1,28 +1,4 @@
-<nav class="navbar" [class.open]="menuOpen">
-  <div class="logo">Logo</div>
-  <ul class="nav-links" [class.active]="menuOpen">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-  <div class="hamburger" (click)="toggleMenu()">
-    <span [class.bar1]="menuOpen"></span>
-    <span [class.bar2]="menuOpen"></span>
-    <span [class.bar3]="menuOpen"></span>
-  </div>
-</nav>
-
-<section class="hero">
-  <!-- Video usato come sfondo parallax -->
-  <video #heroVideo muted preload="auto">
-    <source src="assets/video/5561380-hd_1920_1080_25fps.mp4" type="video/mp4" />
-    Il tuo browser non supporta il video.
-  </video>
-
-  <!-- Testo centrale con fade-in -->
-  <div class="hero-content" [style.opacity]="fadeOpacity">
-    <h1>Welcome to my portfolio</h1>
-    <p>Scroll to scrub the video</p>
-  </div>
-</section>
+<div class="hero">
+  <h1 #headline class="headline">#I&#8205;Really&#8205;Love&#8205;GSAP</h1>
+  <button (click)="animateText()">Animate Text</button>
+</div>

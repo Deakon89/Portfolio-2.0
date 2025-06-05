@@ -5,7 +5,7 @@ import { ProjectsPageComponent } from './component/project-page/project-page.com
 
 export const routes: Routes = [
     {
-        path: '',component:HeroComponent, pathMatch: 'full', children: [
+        path: '',loadComponent: () => import('./component/hero/hero.component').then(m => m.HeroComponent), children: [
             {path: 'project-page', component:ProjectsPageComponent}
         ]
     },
