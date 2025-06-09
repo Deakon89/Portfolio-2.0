@@ -1,59 +1,6 @@
-<!-- ===================================================================
-     1) SPLASH CON IMMAGINE CHE PULSA
-=================================================================== -->
-<div class="splash-container" *ngIf="showSplash">
-  <!--
-    - L’immagine pulsa via keyframes (classe .pulse).
-    - Al click, parte onSplashClick() che:
-        1. cambia l’URL dell’immagine a `secondImage`
-        2. aggiunge la classe .jump
-        3. dopo 500ms (durata animazione jump) fine dello splash
-  -->
- <img
-  [src]="currentImage"
-  alt="Splash Logo"
-  class="logo splash-logo"
-  [class.pulse]="!isJumping"
-  [class.jump]="isJumping"
-  (click)="onSplashClick()"
-/>
-</div>
 
-<!-- ===================================================================
-     2) HOME + ANIMAZIONE FINALE LOGO + MENU CHE APPARE
-=================================================================== -->
-<div class="home-container" *ngIf="!showSplash">
-  <!--
-    a) DIV SINISTRO: contiene il logo ridimensionato/spostato e il contenuto di app-home.
-    b) DIV DESTRA: menu che appare con animazione (classe .menu-enter).
-  -->
-  <div class="left-part">
-    <!--
-      - La `finalLogo` viene mostrata con animazione di movimento a sinistra e ridimensionamento
-      - Appena appare questo `div`, la classe .logo-final-start scatta
-      - Questo crea l’effetto “logo si sposta a sinistra e si riduce” (usiamo keyframes)
-    -->
-    <img
-      [src]="finalImage"
-      alt="Final Logo"
-      class="logo logo-final"
-      [class.logo-final-start]="homeAnimationStarted"
-    />
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
 
-    <!-- Poi includiamo il componente home vero e proprio -->
-    <app-home></app-home>
-  </div>
-
-  <!-- DIV DESTRO: il menu slide in da destra -->
-  <div class="right-menu" [class.menu-enter]="menuAnimationStarted">
-    <!-- Qui metti il markup del tuo menu -->
-    <nav>
-      <ul>
-        <li><a href="#">Voce 1</a></li>
-        <li><a href="#">Voce 2</a></li>
-        <li><a href="#">Voce 3</a></li>
-        <!-- ... -->
-      </ul>
-    </nav>
-  </div>
-</div>
+<router-outlet></router-outlet>

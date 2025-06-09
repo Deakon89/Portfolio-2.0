@@ -1,0 +1,125 @@
+/* ================================================================
+   A) STILI GENERALI PER LO SPLASH
+================================================================ */
+.splash-container {
+  /* Assicuriamoci che sia a schermo intero e centri il contenuto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.splash-logo {
+  width: 200px; 
+  height: 200px;
+  cursor: pointer;
+  border-radius: 100%;
+  /* user-select: none; */
+  backface-visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Keyframes per “pulsare” */
+@keyframes pulseAnim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Quando non ho cliccato, imposto l’animazione di loop */
+.pulse {
+  animation: pulseAnim 1s infinite ease-in-out;
+}
+
+/* Keyframes per “salto” al click */
+@keyframes jumpAnim {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.jump {
+  animation: jumpAnim 0.5s ease-out;
+}
+
+/* Quando l’immagine cambia, possiamo farla sfumare leggermente.
+   Di base, usiamo transition su opacity, per “mascherare” il cambio di src. */
+.splash-logo.changed {
+  opacity: 0; /* diventa trasparente, poi in TS cambiamo l’URL, poi torna opaca */
+  transition: opacity 0.3s ease;
+}
+.splash-logo.changed.show {
+  opacity: 1;
+}
+
+
+/* ================================================================
+   B) STILI PER LA HOME + LOGO FINALE + MENU
+================================================================ */
+
+/* Contenitore principale della Home (flex: sinistra + destra) */
+.home-container {
+ display: grid;
+ grid-template-columns: 2fr 1fr;
+}
+
+/* Lato sinistro: logo + contenuto home */
+.left-part {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+/* Lato destro: menu sliding in */
+.right-menu {
+  grid-column: 2;
+  transition: width 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+/* Classe che fa apparire il menu */
+ .menu-enter {
+  flex: 0 0 30%; 
+  opacity: 1;
+} 
+
+/* Logo all’interno della Home (terza immagine) */
+.logo-final {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%; 
+  
+}
+
+
+
+/* Facciamo un po’ di stile al menu (esempio) */
+.right-menu nav {
+  padding: 20px;
+   display: inline-block;
+}
+
+.right-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+ 
+}
+
+.right-menu li {
+  margin-bottom: 10px;
+}
+
+.right-menu a {
+  text-decoration: none;
+  color: #ffd501;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
