@@ -1,0 +1,13 @@
+<div class="splash-container">
+  <img src="{{ images[imageIndex] }}" alt="Portfolio" class="logo splash-logo pulse"
+        (click)="handleClick()"
+        
+        [class.changed]="clicked"
+        [class.show]="clicked"
+        [ngClass]="{'pulse': !clicked}"
+/>
+
+      <ng-content >
+      <router-outlet *ngIf="homeVisible"></router-outlet>
+      </ng-content>
+</div>

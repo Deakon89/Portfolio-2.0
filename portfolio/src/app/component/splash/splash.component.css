@@ -2,6 +2,7 @@
    A) STILI GENERALI PER LO SPLASH
 ================================================================ */
 .splash-container {
+  /* Assicuriamoci che sia a schermo intero e centri il contenuto */
   position: fixed;
   top: 0;
   left: 0;
@@ -56,8 +57,8 @@
 }
 
 @keyframes slide {
-  from { transform: translateX(0); }
-  to { transform: translateX(-450px); }
+  from { transform: translateY(0); }
+  to { transform: translateY(-260px); }
 }
 
 .fade{
@@ -87,25 +88,14 @@
 }
 
 .menu{
-  margin-top: 150px;
    border: 2px solid rgb(255, 213, 0);
    padding: 2rem;
    box-shadow: 0 0 10px rgb(255, 213, 0);
-   max-width: 1000px;
-   min-width: 500px;
-   max-height: 500px;
-   min-height: 300px;
-   border-radius: 10px;
-   display: flex;
-   flex-direction: column;
-   overflow: hidden;
-   z-index: 1000;
 }
 
 .menu li{
   list-style: none;
   margin: 1rem;
-
 }
 
 /* FADE OUT per le non-selezionate */
@@ -116,14 +106,9 @@
 
 /* SLIDE UP per la selezionata */
 .slide-up {
-  opacity: 0;
-  transform: scale(0.5);
-   transition: 
-    transform 1.5s cubic-bezier(0.4, 0.0, 0.2, 1), 
-    opacity   1.5s ease-in-out  
-  ;
+  /* usa transform per evitare problemi di layout */
+  transform: translateY(-200px);
+  transition: transform 0.5s ease;
+  /* porta in primo piano */
   z-index: 1001;
 }
-
-
-

@@ -1,0 +1,7 @@
+<app-loading-bar *ngIf="loading"></app-loading-bar>
+
+<!-- Contenuto della pagina mostrato solo a loader nascosto -->
+<div *ngIf="!loading">
+  <p>projects works!</p>
+  <!-- qui tutto il markup del tuo progetto -->
+</div>

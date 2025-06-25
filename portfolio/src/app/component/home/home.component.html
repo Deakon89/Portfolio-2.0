@@ -1,33 +1,21 @@
 
-<!-- 
-<div class="splash-container">
+<div class="menu-vis fade">
+  <div class="menu">
+  <ul *ngIf="menuVisible">
+    <li *ngFor="let item of menuItems; let i = index"
+        [class.fade-out]="selectedIndex !== null && selectedIndex !== i"
+        [class.slide-up]="selectedIndex === i">
+      <a href="" (click)="onSelect(i, $event)" class="hover:underline">
+        <img [src]="item.img" alt="">
+      </a>
+    </li>
+  </ul>
 
- <img
-  src="assets/avatarZZZ.png"
-  alt="Splash Logo"
-  class=""
-/>
-</div> -->
-<div class="splash-container">
-      <img
-        src="{{ images[imageIndex] }}"
-        alt="Portfolio"
-        class="logo splash-logo pulse"
-        (click)="handleClick()"
-        [class.changed]="clicked"
-        [class.show]="clicked"
-        [ngClass]="{'pulse': !clicked}"
-      />
+  <router-outlet ></router-outlet>
+  </div>
+</div>
 
-      <div
-        *ngIf="clicked"
-        class="menu-vis fade"
-      >
-        <ul class="menu">
-          <li><a href="#about" class="hover:underline"><img src="assets/about_me_pixel.png" alt=""></a></li>
-          <li><a href="#projects" class="hover:underline"><img src="assets/projects_pixel.png" alt=""></a></li>
-          <li><a href="#contact" class="hover:underline"><img src="assets/contacts_pixel.png" alt=""></a></li>
-        </ul>
-      </div>
-    </div>
+<!-- questo router-outlet ospiterà About/Projects/Contact -->
+
+
 

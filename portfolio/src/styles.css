@@ -19,6 +19,14 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+@font-face {
+  font-family: 'A Goblin Appears! ';
+  src: url('assets/fonts/A\ Goblin\ Appears!.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* evita flash di testo invisibile */
+}
+
 /* --------------------------------------
    KEYFRAMES FOR STAR ANIMATION
    -------------------------------------- */

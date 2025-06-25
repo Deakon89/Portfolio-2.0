@@ -1,6 +1,15 @@
-
+<div id="background-layers">
 <div id="stars"></div>
 <div id="stars2"></div>
 <div id="stars3"></div>
-
-<router-outlet></router-outlet>
+<div #parallaxObject id="planet1" class="parallax-object" data-initial-top="6000" data-initial-left="15%" ></div>
+<div #parallaxObject id="ship1" class="parallax-object" data-initial-top="3000" data-initial-left="70%" ></div>
+<div #parallaxObject id="planet2" class="parallax-object" data-initial-top="1000" data-initial-left="35%" ></div>
+<div #parallaxObject id="ship2" class="parallax-object" data-initial-top="8000" data-initial-left="50%" ></div>
+<div #parallaxObject id="planet3" class="parallax-object" data-initial-top="600" data-initial-left="65%" ></div>
+<div #parallaxObject id="planet4" class="parallax-object" data-initial-top="3000" data-initial-left="85%" ></div>
+<div #parallaxObject id="ship3" class="parallax-object" data-initial-top="1000" data-initial-left="20%" ></div>
+</div>
+<article class="main-article">
+    <router-outlet></router-outlet>
+</article>
