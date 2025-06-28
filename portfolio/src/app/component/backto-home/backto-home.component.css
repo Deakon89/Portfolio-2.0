@@ -1,0 +1,8 @@
+button{
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: rgb(255, 224, 21);
+    font-family: 'A Goblin Appears! ';
+    cursor: pointer; 
+}

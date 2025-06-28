@@ -6,7 +6,7 @@
 
   
   <button (click)="toggleLang()">
-    {{ showEnglish ? 'Mostra Italiano' : 'Show English' }}
+    {{ showEnglish ? 'Mostra Italiano' : 'showEnglish' }}
   </button>
  
   <p class="ita" [class.change-lang]="showEnglish">Ciao! Sono Francesco, sviluppatore Fullstack freelance con una passione profonda per il coding. Dopo aver lavorato come referente di reparto in un negozio di articoli sportivi, ho deciso di trasformare la mia passione per la programmazione in una carriera professionale. <br><br>
@@ -45,8 +45,10 @@ I offer web development services, including websites, web apps, and collaboratio
  
 
   <!-- Bottone “flip” -->
+   <div class="flip-button-container">
   <button class="flip-button" (click)="togglePage()">
     {{ showContacts ? '← Torna' : 'Contatti →' }}
   </button>
-
+  <app-backto-home></app-backto-home>
+</div>
 </div>

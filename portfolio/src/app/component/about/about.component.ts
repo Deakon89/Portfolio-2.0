@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { LoadingBarComponent } from '../loading-bar/loading-bar.component';
+import { BacktoHomeComponent } from '../backto-home/backto-home.component';
 
 @Component({
   selector: 'app-about',
-  imports: [CommonModule, LoadingBarComponent],
+  imports: [CommonModule, LoadingBarComponent, BacktoHomeComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })

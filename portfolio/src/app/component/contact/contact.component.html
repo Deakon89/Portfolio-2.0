@@ -1,7 +1,22 @@
 <app-loading-bar *ngIf="loading"></app-loading-bar>
-
-
 <div *ngIf="!loading">
-  <p>contact works!</p>
-  <!-- qui tutto il markup del tuo progetto -->
+  <h1>Contact me</h1>
+  <h3 class="line-1 anim-typewriter">use the phone below</h3>
+  <div class="tel-container">
+  <a [href]="whatsappLink" target="_blank" (click)="onCall($event)" 
+     class="whatsapp-fab" 
+     matTooltip="Chatta con noi su WhatsApp!" 
+     matTooltipPosition="left" 
+     aria-label="Contattaci su WhatsApp">
+    <img 
+      class="tel" 
+      [src]="
+        isCalling 
+          ? 'assets/tel-call.png' 
+          : 'assets/tel.png'
+      " 
+      alt="WhatsApp"/>
+  </a>
+</div>
+<app-backto-home></app-backto-home>
 </div>

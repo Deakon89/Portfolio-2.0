@@ -34,3 +34,10 @@ h1{
     font-family: 'A Goblin Appears! ';
     color: rgb(255, 224, 21);
 }
+
+.flip-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
