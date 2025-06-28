@@ -1,7 +1,52 @@
 <app-loading-bar *ngIf="loading"></app-loading-bar>
 
+<div class="wrapper" *ngIf="!loading">
+<h1 class="line-1 anim-typewriter" >About me</h1>
+<div class="about fade" [class.change-lang]="showContacts">
 
-<div *ngIf="!loading">
-  <p>about works!</p>
+  
+  <button (click)="toggleLang()">
+    {{ showEnglish ? 'Mostra Italiano' : 'Show English' }}
+  </button>
+ 
+  <p class="ita" [class.change-lang]="showEnglish">Ciao! Sono Francesco, sviluppatore Fullstack freelance con una passione profonda per il coding. Dopo aver lavorato come referente di reparto in un negozio di articoli sportivi, ho deciso di trasformare la mia passione per la programmazione in una carriera professionale. <br><br>
+
+Sono una persona creativa e professionale, capace di affrontare e risolvere problemi complessi con metodo e determinazione. Ho esperienza sia nel lavoro di squadra sia nella gestione autonoma dei progetti, adattandomi sempre alle esigenze del cliente e del contesto lavorativo. <br><br>
+
+Ho studiato diversi linguaggi di programmazione, ma attualmente prediligo TypeScript e Java, con particolare attenzione allo sviluppo frontend tramite Angular. Sono sempre curioso e aggiornato sulle nuove tecnologie per offrire soluzioni moderne ed efficienti. <br><br>
+
+Offro servizi di sviluppo di siti web, web app e collaborazioni su progetti di varia complessità, con l’obiettivo di creare prodotti funzionali e di qualità.</p>
   <!-- qui tutto il markup del tuo progetto -->
+
+  <p class="eng" [class.change-lang]="!showEnglish">Hi! I’m Francesco, a freelance Fullstack developer with a deep passion for coding. After working as a department manager in a sports equipment store, I decided to turn my passion for programming into a professional career. <br><br>  
+
+I am a creative and professional person, skilled at tackling and solving complex problems with method and determination. I have experience working both in teams and independently, always adapting to the client’s needs and the project context. <br><br>
+
+I have studie d several programming languages, but I currently favor TypeScript and Java, with a strong focus on frontend development using Angular. I stay curious and up-to-date with new technologies to provide modern and efficient solutions. <br><br>
+
+I offer web development services, including websites, web apps, and collaborations on projects of various sizes, aiming to deliver functional and high-quality products.</p>
+ </div>
+
+  <div class="page contacts fade" [class.change-lang]="!showContacts">
+  <div class="image">
+    <img src="assets/me.png" alt="me">
+  </div>
+   
+      <a href="https://facebook.com/tuoprofilo" target="_blank">
+        <img src="assets/icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://instagram.com/tuoprofilo" target="_blank">
+        <img src="assets/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://linkedin.com/in/tuoprofilo" target="_blank">
+        <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+      </a> 
+    </div>
+ 
+
+  <!-- Bottone “flip” -->
+  <button class="flip-button" (click)="togglePage()">
+    {{ showContacts ? '← Torna' : 'Contatti →' }}
+  </button>
+
 </div>
