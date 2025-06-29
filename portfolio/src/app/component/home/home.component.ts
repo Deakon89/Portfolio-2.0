@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter } from 'rxjs';
+import { SubscriptionLoggable } from 'rxjs/internal/testing/SubscriptionLoggable';
 
 
 @Component({
@@ -15,9 +16,9 @@ export class HomeComponent {
   selectedIndex: number | null = null;
  
   menuItems = [
-    { route : ['about'], img: 'assets/about_me_pixel.png' },
-    { route : ['projects'], img: 'assets/projects_pixel.png' },
-    { route : ['contact'], img: 'assets/contacts_pixel.png' },
+    { route : ['about'], label:'< About me >' },
+    { route : ['projects'], label:'< Projects >' },
+    { route : ['contact'], label:'< Contact >' },
   ];
 
   constructor(private router: Router) {}

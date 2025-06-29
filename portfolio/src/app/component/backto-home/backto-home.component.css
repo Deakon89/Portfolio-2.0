@@ -6,3 +6,8 @@ button{
     font-family: 'A Goblin Appears! ';
     cursor: pointer; 
 }
+
+button:hover{
+    color: rgb(255, 224, 21);
+    text-shadow: 0 0 10px rgb(255, 224, 21);
+}

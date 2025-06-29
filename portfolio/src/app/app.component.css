@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  margin: 0;
 }
 
 /* Articolo principale sempre visibile */
@@ -19,6 +20,7 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 0;
+  inset: 0;
 }
 
 @keyframes animStar {
@@ -1360,13 +1362,16 @@ body {
 #planet3 {
   background-image: url('../assets/metor2.png');
   /* animation: rotate 3s linear infinite; */
-
+ top: 200px;
+  left: 1100px
 }
 #planet4 {
   background-image: url('../assets/metor1.png');
+  top: 500px;
+  left: 100px
   /* animation: rotate 3s linear infinite; */
 
-}
+ } 
 
 #ship3 {
   background-image: url('../assets/sate1-rem.png');
@@ -1374,42 +1379,28 @@ body {
  
 }
 
-/* --------------------------------------
-   TITLE STYLING
-   -------------------------------------- */
-/* #title {
+ #planet3, #planet4 {
+  animation: rotate-self 8s linear infinite;
+}
+
+@keyframes rotate-self {
+  from   { transform: rotate(0deg); }
+  to     { transform: rotate(360deg); }
+} 
+
+/* SHIPS: dimensione */
+.parallax-ship {
   position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  color: #FFF;
-  text-align: center;
-  font-weight: 300;
-  font-size: 50px;
-  letter-spacing: 10px;
-  margin-top: -60px;
-  padding-left: 10px;
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.parallax-planet {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-#title span {
-  display: inline-block;
-  background: -webkit-linear-gradient(white, #38495a);
-  background: linear-gradient(white, #38495a); /* proprietà standard aggiunta */
-  /* -webkit-background-clip: text;
-  background-clip: text; 
-  -webkit-text-fill-color: transparent;
-  text-emphasis-color: transparent; 
-} * */
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.rotate {
-  animation: rotate 3s linear infinite;
-}

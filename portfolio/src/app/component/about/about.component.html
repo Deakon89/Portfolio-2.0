@@ -5,9 +5,6 @@
 <div class="about fade" [class.change-lang]="showContacts">
 
   
-  <button (click)="toggleLang()">
-    {{ showEnglish ? 'Mostra Italiano' : 'showEnglish' }}
-  </button>
  
   <p class="ita" [class.change-lang]="showEnglish">Ciao! Sono Francesco, sviluppatore Fullstack freelance con una passione profonda per il coding. Dopo aver lavorato come referente di reparto in un negozio di articoli sportivi, ho deciso di trasformare la mia passione per la programmazione in una carriera professionale. <br><br>
 
@@ -29,9 +26,9 @@ I offer web development services, including websites, web apps, and collaboratio
 
   <div class="page contacts fade" [class.change-lang]="!showContacts">
   <div class="image">
-    <img src="assets/me.png" alt="me">
+    <img class="me" src="assets/me.png" alt="me">
   </div>
-   
+   <div class="socials">
       <a href="https://facebook.com/tuoprofilo" target="_blank">
         <img src="assets/icons/facebook.svg" alt="Facebook">
       </a>
@@ -40,15 +37,52 @@ I offer web development services, including websites, web apps, and collaboratio
       </a>
       <a href="https://linkedin.com/in/tuoprofilo" target="_blank">
         <img src="assets/icons/linkedin.svg" alt="LinkedIn">
-      </a> 
+      </a>
+    </div> 
     </div>
  
 
   <!-- Bottone “flip” -->
    <div class="flip-button-container">
-  <button class="flip-button" (click)="togglePage()">
-    {{ showContacts ? '← Torna' : 'Contatti →' }}
+  <!-- <button (click)="toggleLang()">
+    {{ showEnglish ? 'Mostra Italiano' : 'showEnglish' }}
+  </button> -->
+  <button (click)="toggleLang()">
+    <!-- quando showEnglish = false, mostro bandiera italiana -->
+    <img
+      *ngIf="!showEnglish"
+      src="assets/eng.png"
+      alt="Mostra Italiano"
+      class="lang-icon"
+    />
+    <!-- quando showEnglish = true, mostro bandiera UK/US -->
+    <img
+      *ngIf="showEnglish"
+      src="assets/ita.png"
+      alt="Show English"
+      class="lang-icon"
+    />
   </button>
+   <button (click)="togglePage()">
+    <!-- quando showEnglish = false, mostro bandiera italiana -->
+    <img
+      *ngIf="!showContacts"
+      src="assets/dx.png"
+      alt="Mostra Italiano"
+      class="flip-button"
+    />
+    <!-- quando showEnglish = true, mostro bandiera UK/US -->
+    <img
+      *ngIf="showContacts"
+      src="assets/sx.png"
+      alt="Show English"
+      class="flip-button"
+    />
+  </button>
+
+  <!-- <button class="flip-button" >
+    {{ showContacts ? '<' : '>' }}
+  </button> -->
   <app-backto-home></app-backto-home>
 </div>
 </div>
