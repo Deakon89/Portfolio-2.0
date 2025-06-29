@@ -64,3 +64,18 @@ h1{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+.socials a i {
+    color: rgb(255, 224, 21);
+    font-size: 3rem;
+    margin: auto;
+    cursor: pointer;
+    /* text-shadow: 0 0 10px rgb(255, 224, 21); */
+    transition: all 0.3s ease-in-out;
+    padding: 1rem;
+  }
+  
+  .socials a i:hover {
+    color: rgb(255, 224, 21);
+    text-shadow: 0 0 10px rgb(255, 224, 21);
+  }
