@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs",
-   "build:prod": "ng build && ng run portfolio:prerender && rename dist\\portfolio\\browser\\index.csr.html index.html"
+    "build:prod": "ng build && ng run portfolio:server && ng run portfolio:prerender && cp dist/portfolio/browser/index.csr.html dist/portfolio/browser/index.html"
 
   },
   "private": true,
