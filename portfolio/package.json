@@ -8,7 +8,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs"
+    "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs",
+    "postbuild": "mv dist/portfolio/browser/index.csr.html dist/portfolio/browser/index.html"
   },
   "private": true,
   "dependencies": {
