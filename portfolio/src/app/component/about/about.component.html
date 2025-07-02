@@ -1,34 +1,35 @@
 <app-loading-bar *ngIf="loading"></app-loading-bar>
 
 <div class="wrapper" *ngIf="!loading">
-<h1 class="line-1 anim-typewriter" >About me</h1>
+<h1 class="line-2 anim-typewriter" >About me</h1>
 <div class="about fade" [class.change-lang]="showContacts">
 
   
  
   <p class="ita" [class.change-lang]="showEnglish">Ciao! Sono Francesco, sviluppatore Fullstack freelance con una passione profonda per il coding. Dopo aver lavorato come referente di reparto in un negozio di articoli sportivi, ho deciso di trasformare la mia passione per la programmazione in una carriera professionale. <br><br>
 
-Sono una persona creativa e professionale, capace di affrontare e risolvere problemi complessi con metodo e determinazione. Ho esperienza sia nel lavoro di squadra sia nella gestione autonoma dei progetti, adattandomi sempre alle esigenze del cliente e del contesto lavorativo. <br><br>
+Sono una persona creativa e professionale, capace di affrontare e risolvere problemi complessi con metodo e determinazione. Ho esperienza sia nel lavoro di squadra sia nella gestione autonoma dei progetti, adattandomi sempre alle esigenze del cliente e del contesto lavorativo.
+Sono sempre curioso e aggiornato sulle nuove tecnologie per offrire soluzioni moderne ed efficienti. <br><br>
 
-Ho studiato diversi linguaggi di programmazione, ma attualmente prediligo TypeScript e Java, con particolare attenzione allo sviluppo frontend tramite Angular. Sono sempre curioso e aggiornato sulle nuove tecnologie per offrire soluzioni moderne ed efficienti. <br><br>
-
-Offro servizi di sviluppo di siti web, web app e collaborazioni su progetti di varia complessità, con l’obiettivo di creare prodotti funzionali e di qualità.</p>
+</p>
   <!-- qui tutto il markup del tuo progetto -->
 
   <p class="eng" [class.change-lang]="!showEnglish">Hi! I’m Francesco, a freelance Fullstack developer with a deep passion for coding. After working as a department manager in a sports equipment store, I decided to turn my passion for programming into a professional career. <br><br>  
 
-I am a creative and professional person, skilled at tackling and solving complex problems with method and determination. I have experience working both in teams and independently, always adapting to the client’s needs and the project context. <br><br>
-
-I have studie d several programming languages, but I currently favor TypeScript and Java, with a strong focus on frontend development using Angular. I stay curious and up-to-date with new technologies to provide modern and efficient solutions. <br><br>
-
-I offer web development services, including websites, web apps, and collaborations on projects of various sizes, aiming to deliver functional and high-quality products.</p>
+I am a creative and professional person, skilled at tackling and solving complex problems with method and determination. I have experience working both in teams and independently, always adapting to the client’s needs and the project context.
+I stay curious and up-to-date with new technologies to provide modern and efficient solutions. <br><br>
+</p>
  </div>
 
   <div class="page contacts fade" [class.change-lang]="!showContacts">
   <div class="image">
     <img class="me" src="assets/me.png" alt="me">
   </div>
-   <div class="socials">
+  <div class="offer">
+  <p class="ita" [class.change-lang]="showEnglish">Offro servizi di sviluppo di siti web, web app e collaborazioni su progetti di varia complessità, con l’obiettivo di creare prodotti funzionali e di qualità.</p>
+  <p class="eng" [class.change-lang]="!showEnglish">I offer web development services, including websites, web apps, and collaborations on projects of various sizes, aiming to deliver functional and high-quality products.</p>
+  </div>
+  <div class="socials">
       <!-- <a href="https://facebook.com/tuoprofilo" target="_blank">
         <img src="assets/icons/facebook.svg" alt="Facebook">
       </a>
@@ -40,15 +41,15 @@ I offer web development services, including websites, web apps, and collaboratio
       </a> -->
         <a href="https://github.com/Deakon89" class="github-link" target="_blank">
     <!-- <img class="github-icon" src="assets/github.svg" alt="github"> -->
-     <i class="bi bi-github text-warning"></i>
+     <i class="bi bi-github"></i>
   </a>
   <a href="#" class="link-din" target="_blank">
     <!-- <img class="github-icon" src="assets/github.svg" alt="github"> -->
-     <i class="bi bi-linkedin text-warning"></i>
+     <i class="bi bi-linkedin"></i>
   </a>
   <a href="#" class="face-icon" target="_blank">
     <!-- <img class="github-icon" src="assets/github.svg" alt="github"> -->
-     <i class="bi bi-facebook text-warning"></i>
+     <i class="bi bi-facebook"></i>
   </a>
     </div> 
     </div>

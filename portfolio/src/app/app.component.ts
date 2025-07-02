@@ -131,9 +131,11 @@ import {
   ElementRef,
   HostListener,
   QueryList,
-  ViewChildren
+  ViewChildren,
+  Inject,
+  PLATFORM_ID
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
 interface Layer { id: string; speedY: number; speedX?: number; }
@@ -160,17 +162,25 @@ export class AppComponent implements AfterViewInit {
   ];
 
   @ViewChildren('parallaxPlanet', { read: ElementRef }) planetEls!: QueryList<ElementRef<HTMLElement>>;
-  @ViewChildren('parallaxShip', { read: ElementRef }) shipEls!:   QueryList<ElementRef<HTMLElement>>;
+  @ViewChildren('parallaxShip', { read: ElementRef }) shipEls!: QueryList<ElementRef<HTMLElement>>;
 
   private vw!: number;
   private vh!: number;
+  private isBrowser: boolean;
 
   // stato dei layers
   private planetStates: Record<string, { x: number; y: number; angle: number }> = {};
-  private shipStates:  Record<string, { x: number; y: number }> = {};
+  private shipStates: Record<string, { x: number; y: number }> = {};
 
-  // scrollOffset non serve più, muoviamo ships automaticamente
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
+
   ngAfterViewInit(): void {
+    if (!this.isBrowser) {
+      return;
+    }
+
     this.vw = window.innerWidth;
     this.vh = window.innerHeight;
 
@@ -191,11 +201,18 @@ export class AppComponent implements AfterViewInit {
 
   @HostListener('window:resize')
   onResize() {
+    if (!this.isBrowser) {
+      return;
+    }
     this.vw = window.innerWidth;
     this.vh = window.innerHeight;
   }
 
   private animateLoop() {
+    if (!this.isBrowser) {
+      return;
+    }
+
     // Move and loop planets
     this.planetEls.forEach(elRef => {
       const el = elRef.nativeElement;

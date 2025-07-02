@@ -1,7 +1,29 @@
 <app-loading-bar *ngIf="loading"></app-loading-bar>
 
-<!-- Contenuto della pagina mostrato solo a loader nascosto -->
-<div *ngIf="!loading">
-  <p>projects works!</p>
-  <!-- qui tutto il markup del tuo progetto -->
+<div *ngIf="!loading" class="projects-wrapper">
+  <div class="title-container">
+  <h1 class="line-2 anim-typewriter">My Projects</h1>
+  </div>
+  <div class="card-container">
+    <div
+      class="project-card"
+      *ngFor="let project of projects; let i = index"
+      [class.active]="i === currentIndex"
+    >
+      <img [src]="project.img" [alt]="project.title" />
+      <h3>{{ project.title }}</h3> 
+      <p>{{ project.description }}</p>
+     <a [href]="project.link" target="_blank" class="project-link">
+       
+      Go to the project
+      </a>
+    </div>
+  </div>
+
+  <div class="nav-arrows">
+    <button (click)="prev()" [disabled]="currentIndex === 0"><img src="assets/sx.png" alt=""></button>
+    <button (click)="next()" [disabled]="currentIndex === projects.length - 1"><img src="assets/dx.png" alt=""></button>
+  
+  </div>
+  <app-backto-home></app-backto-home>
 </div>

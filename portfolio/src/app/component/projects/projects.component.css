@@ -1,0 +1,73 @@
+.projects-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 450px;
+
+}
+
+.card-container {
+  flex: 1;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+/* tutte le card sovrapposte, invisibili di base */
+.project-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 300px;
+  width: 320px;
+  padding: 1rem;
+  background: rgba(255,224,21,0.9 );
+  color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  text-align: center;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  font-family: 'A Goblin Appears! ';
+}
+
+/* la card “attiva” diventa visibile */
+.project-card.active {
+  opacity: 1;
+}
+
+/* stile dell’immagine dentro la card */
+.project-card img {
+  width: 50%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.nav-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.nav-arrows button {
+  background: rgba(255, 224, 21, 0);
+  border: none;
+  
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.nav-arrows button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.title-container{
+    font-family: 'A Goblin Appears! ';
+    color: rgb(255, 224, 21);
+    margin-bottom: 1rem;
+}
