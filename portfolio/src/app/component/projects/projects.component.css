@@ -2,9 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 350px;
   height: 450px;
-
 }
 
 .card-container {
@@ -19,7 +18,7 @@
   top: 50%;
   left: 50%;
   height: 300px;
-  width: 320px;
+  max-width: 320px;
   padding: 1rem;
   background: rgba(255,224,21,0.9 );
   color: #000000;
@@ -55,8 +54,7 @@
 .nav-arrows button {
   background: rgba(255, 224, 21, 0);
   border: none;
-  
-  font-size: 1.25rem;
+   font-size: 1.25rem;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -70,4 +68,30 @@
     font-family: 'A Goblin Appears! ';
     color: rgb(255, 224, 21);
     margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 450px) {
+  p{
+    font-size: 12px;
+  }
+  h3{
+    font-size: 15px;
+  }
+  a{
+    font-size: 12px;
+  } 
+  .card-container{
+    width: 300px; 
+  }
+  .project-card{
+    width: 250px;
+    margin: auto; 
+   }
+   /* h1{
+    left: -20px;
+   } */
+    .projects-wrapper{
+      width: 285px;
+    }
+  
 }
