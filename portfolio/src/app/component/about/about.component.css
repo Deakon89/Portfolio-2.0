@@ -20,6 +20,7 @@ font-size: 15px;
     width: 150px;
     height: 175px;
     margin: auto;
+    text-align: center;
 }
 
 .me{
@@ -27,6 +28,7 @@ font-size: 15px;
     height: 100%;
     background-color: rgb(217, 190, 15); 
     border-radius: 50%;
+    margin-top: 1rem;
 }
 
 h1{
@@ -86,4 +88,46 @@ h1{
     font-size: 15px;
     margin-top: 2rem;
   }
+ .anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+} 
+  @keyframes typewriter{
+  from{width: 0;}
+  to{width: 10em;}
+}
+  @keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
 
+@media screen and (max-width: 700px) {
+  p{
+  font-size: 13px;
+}
+}
+@media screen and (max-width: 505px) {
+  p{
+  font-size: 9px;
+  margin-bottom: 2px;
+}
+
+.socials a i {
+    
+    font-size: 1rem;
+   
+  }
+
+  .me{
+    width: 70%;
+    height: 60%;
+    background-color: rgb(217, 190, 15); 
+    border-radius: 50%;
+}
+
+.image{
+    
+    height: 150px;
+    
+}
+}
