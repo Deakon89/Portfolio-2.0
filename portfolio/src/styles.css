@@ -30,10 +30,10 @@ body {
 /* --------------------------------------
    KEYFRAMES FOR STAR ANIMATION
    -------------------------------------- */
-.anim-typewriter{
+ /* .anim-typewriter{
   animation: typewriter 4s steps(44) 1s 1 normal both,
              blinkTextCursor 500ms steps(44) infinite normal;
-}
+} 
 @keyframes typewriter{
   from{width: 0;}
   to{width: 20em;}
@@ -41,7 +41,7 @@ body {
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
-}
+} */
 
 .line-1{
     position: relative;
@@ -83,4 +83,15 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@media screen and (max-width: 500px) {
+ .line-1{
+  font-size: 100%;
+ }
+
+ .line-2{
+  font-size: 80%;
+ }
+
 }
