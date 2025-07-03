@@ -1,7 +1,7 @@
 <app-loading-bar *ngIf="loading"></app-loading-bar>
 <div *ngIf="!loading">
-  <h1>Contact me</h1>
-  <h3 class="line-2 anim-typewriter">use the phone below</h3>
+  <h1 class="line-1 anim-typewriter">Contact me</h1>
+  <h3 class="line-2 anim-typewriter-2">use the phone below</h3>
   <div class="tel-container">
   <a [href]="whatsappLink" target="_blank" (click)="onCall($event)" 
      class="whatsapp-fab" 
