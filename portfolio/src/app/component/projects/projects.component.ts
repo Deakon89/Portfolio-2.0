@@ -15,7 +15,7 @@ export class ProjectsComponent implements OnInit {
 
     projects = [
     { title: 'RunSpechs', img: 'assets/run.png', description: 'running app', link: 'https://github.com/Deakon89' },
-    { title: 'WarePulse',  img: 'assets/project-beta.png',  description: 'warehouse app' , link: 'https://github.com/Deakon89'},
+    { title: 'WarePulse',  img: 'assets/wp.png',  description: 'warehouse app' , link: 'https://github.com/Deakon89'},
     { title: 'Fenchina mani di carta', img: 'assets/fench.png', description: 'E-Commerce' , link: 'https://github.com/Deakon89'},
     { title: 'Inchiostro', img: 'assets/inc.png', description: 'Open-library app' , link: 'https://github.com/Deakon89'},
     // … altri progetti …
