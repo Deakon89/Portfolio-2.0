@@ -1406,11 +1406,11 @@ body {
 
 @media screen and (max-width: 400px) {
   #planet3 {
- 
+  top: 100px;
   left: 240px
 }
 #planet4 {
-  top: 550px;
+  top: 700px;
   left: 2px
   /* animation: rotate 3s linear infinite; */
 
