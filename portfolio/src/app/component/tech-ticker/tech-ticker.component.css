@@ -4,7 +4,6 @@
   left: 0;
   width: 100%;
   overflow: hidden;
-
   z-index: 10000;
 }
 
@@ -12,7 +11,7 @@
   display: inline-block;
   white-space: nowrap;
   /* Regola la durata (qui 20s) per adattare la velocità */
-  animation: marquee 20s linear infinite;
+  animation: marquee 18s linear infinite;
 }
 
 .ticker__item {
