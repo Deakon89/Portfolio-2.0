@@ -1,0 +1,34 @@
+.ticker {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+
+  z-index: 10000;
+}
+
+.ticker__wrap {
+  display: inline-block;
+  white-space: nowrap;
+  /* Regola la durata (qui 20s) per adattare la velocità */
+  animation: marquee 20s linear infinite;
+}
+
+.ticker__item {
+  display: inline-block;
+  padding-right: 2rem;  
+  color: rgb(255, 224, 21);
+  font-family: 'Pixelary';
+  font-size: 2rem;
+  line-height: 2.5rem;  
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

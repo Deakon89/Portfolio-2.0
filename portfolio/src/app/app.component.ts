@@ -11,13 +11,14 @@ import {
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { OrientationAlertComponent } from './component/orientation-alert/orientation-alert.component';
+import { TechTickerComponent } from './component/tech-ticker/tech-ticker.component';
 
 interface Layer { id: string; speedY: number; speedX?: number; }
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, OrientationAlertComponent],
+  imports: [CommonModule, RouterOutlet, OrientationAlertComponent, TechTickerComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

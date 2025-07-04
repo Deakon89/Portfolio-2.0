@@ -26,6 +26,13 @@ body {
   font-style: normal;
   font-display: swap; /* evita flash di testo invisibile */
 }
+@font-face {
+  font-family: 'Pixelary';
+  src: url('assets/fonts/Pixelary.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* evita flash di testo invisibile */
+}
 
 /* --------------------------------------
    KEYFRAMES FOR STAR ANIMATION
