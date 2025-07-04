@@ -1404,3 +1404,17 @@ body {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 400px) {
+  #planet3 {
+ 
+  left: 240px
+}
+#planet4 {
+  top: 550px;
+  left: 2px
+  /* animation: rotate 3s linear infinite; */
+
+ }
+  
+}
+
