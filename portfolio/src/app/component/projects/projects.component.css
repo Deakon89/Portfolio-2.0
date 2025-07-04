@@ -9,7 +9,7 @@
 .card-container {
   flex: 1;
   position: relative;
-  /* overflow: hidden; */
+  
 }
 
 /* tutte le card sovrapposte, invisibili di base */
@@ -29,19 +29,24 @@
   opacity: 0;
   transition: opacity 300ms ease-in-out;
   font-family: 'A Goblin Appears! ';
+   display: none;
 }
 
 /* la card “attiva” diventa visibile */
 .project-card.active {
   opacity: 1;
+  display: block;
 }
 
 /* stile dell’immagine dentro la card */
 .project-card img {
-  width: 50%;
-  height: auto;
+  width: 100%;
+  /* height: auto; */
   border-radius: 4px;
-  margin-bottom: 1rem;
+}
+
+.img-container{
+  width: 100%;
 }
 
 .nav-arrows {
@@ -79,8 +84,9 @@
     margin-top: 1rem;
   }
   a{
-    font-size: 12px;
-    margin-top: 1rem;
+    font-size: 10px;
+    margin-top: 2rem;
+    
   } 
 
 @media screen and (max-width: 450px) {

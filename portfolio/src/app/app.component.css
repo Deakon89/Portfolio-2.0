@@ -1,5 +1,5 @@
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 0;
 }
 
@@ -8,7 +8,7 @@ body {
   position: relative;
   z-index: 1;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* Wrapper fisso per layer di sfondo */
