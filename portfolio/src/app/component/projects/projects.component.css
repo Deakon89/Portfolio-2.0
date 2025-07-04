@@ -70,8 +70,7 @@
     margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 450px) {
-  p{
+ p{
     font-size: 12px;
   }
   h3{
@@ -80,6 +79,9 @@
   a{
     font-size: 12px;
   } 
+
+@media screen and (max-width: 450px) {
+ 
   .card-container{
     width: 300px; 
   }
